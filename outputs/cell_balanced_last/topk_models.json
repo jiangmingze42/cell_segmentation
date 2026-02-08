@@ -1,0 +1,27 @@
+[
+  {
+    "val_loss": 18.505558490753174,
+    "epoch": 117,
+    "path": "outputs/cell_balanced_last/top5_epoch0117_valloss18.505558.pt"
+  },
+  {
+    "val_loss": 18.55017852783203,
+    "epoch": 129,
+    "path": "outputs/cell_balanced_last/top5_epoch0129_valloss18.550179.pt"
+  },
+  {
+    "val_loss": 18.565326690673828,
+    "epoch": 109,
+    "path": "outputs/cell_balanced_last/top5_epoch0109_valloss18.565327.pt"
+  },
+  {
+    "val_loss": 18.58374547958374,
+    "epoch": 243,
+    "path": "outputs/cell_balanced_last/top5_epoch0243_valloss18.583745.pt"
+  },
+  {
+    "val_loss": 18.584131240844727,
+    "epoch": 181,
+    "path": "outputs/cell_balanced_last/top5_epoch0181_valloss18.584131.pt"
+  }
+]
