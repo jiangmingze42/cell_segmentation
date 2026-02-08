@@ -21,8 +21,8 @@
 `confidence_threshold`控制了对于最终分割结果的选择，经验值为0.3-0.5之间合适。如果感觉分割到的细胞太少可以调低，反之，如果感觉分割到的细胞过多或者将许多并不是细胞的也分割进去，可以调高。
 
 该脚本会：
-1. 读取一个输入 TIF 作为“底图帧序列”（base image kept）。
-2. 对 `img_dir` 文件夹里的图片逐帧做 SAM3（或 SAM3+LoRA）推理（inference only）。
+1. 读取一个输入 TIF 作为底图帧序列
+2. 对 `img_dir` 文件夹里的图片逐帧做推理
 3. 将推理得到的实例 mask 叠加到对应的 TIF 帧上，并保存：
    - 原始底图帧（PNG）
    - 叠加可视化结果（PNG）
@@ -48,7 +48,7 @@
 应当`preprocess.py`的结果文件夹路径
 文件夹内图片按文件名排序逐帧匹配 TIF：
 - 支持后缀：`.jpg .jpeg .png .tif .tiff .bmp`
-- 推理帧数 `N = min(len(images), T)`（图片数和 TIF 帧数取最小）
+- 推理帧数 `N = min(len(images), T)`
 
 #### 推理命令行
 
