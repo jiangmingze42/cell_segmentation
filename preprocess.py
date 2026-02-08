@@ -20,7 +20,7 @@ OUT_DIR = Path("preprocessed_rgb")
 
 
 # =========================
-# Global normalization config (用于从 raw 生成 rgb)
+# Global normalization config
 # =========================
 RAW_P_LOW = 1.0
 RAW_P_HIGH = 99.8
@@ -30,17 +30,13 @@ RAW_GAMMA = 1.0
 KEEP_CH = [0, 1, 2, 3]
 
 
-# =========================
-# Composition config（按你给的程序）
-# =========================
+
 SHG_SCALE = 0.0            # G通道里 SHG 的权重
 SHG_PRESENT_THR = 0.0      # shg > thr 判定“绿色存在”
 THG_MINUS_SHG_SCALE = 2.0  # thg_corr = thg - scale*shg
 
 
-# =========================
-# Frame export config（切片输出 png）
-# =========================
+
 EXPORT_FORMAT = "png"   # "png" 或 "tif" 都可以
 EXPORT_PAD = 6          # frame_000000.png
 
@@ -207,10 +203,8 @@ def main():
             print(f"[Skip] not found: {tif_path}")
             continue
 
-        # 1) raw -> rgb stack (uint8) in memory
         rgb_stack = raw_tif_to_rgb_uint8_stack(tif_path)
 
-        # 2) 直接切片输出到文件夹
         out_frames_dir = OUT_DIR / f"{tif_path.stem}_rgb_frames"
         save_rgb_stack_as_frames(rgb_stack, out_frames_dir)
 

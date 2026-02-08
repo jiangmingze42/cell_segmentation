@@ -507,7 +507,6 @@ def main():
     parser.add_argument("--mask_inbox_ratio", type=float, default=0.40)
     parser.add_argument("--box_overlap_ratio", type=float, default=0.50)
 
-    # NEW: SAM3-only add rule
     parser.add_argument("--sam3_add", action="store_true", default=True, help="enable adding sam3-only masks")
     parser.add_argument("--no_sam3_add", action="store_false", dest="sam3_add")
     parser.add_argument("--sam3_thr", type=float, default=0.50, help="SAM3-only confidence_threshold")
