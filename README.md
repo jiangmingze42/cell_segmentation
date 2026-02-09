@@ -8,7 +8,7 @@
 
 ### 推理方法
 
-首先用`preprocess.py`进行预处理，图像会输出到一个文件夹，其中是每帧的预处理后rgb格式的图片
+首先用`preprocess.py`对于四通道的原tif进行预处理，图像会输出到一个文件夹，其中是每帧的预处理后rgb格式的图片
 之后使用`infer_folder_overlay.py`进行推理
 
 ### infer_folder_overlay.py 使用说明
